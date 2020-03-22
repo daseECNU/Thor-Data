@@ -1,0 +1,37 @@
+WorkloadType read-write complex workload
+
+
+TransactionType read-write simple transaction
+TX begin
+update table_5_5 set column_0 = ? , column_6 = ? , column_7 = ? , column_11 = ?  where pkColumn_0 = ? 
+update table_5_1 set column_0 = ? , column_3 = ? , column_4 = ? , column_6 = ?  where pkColumn_0 between ? and ?
+select column_0, column_1, column_2, column_3, column_4, column_6, column_7, column_9, column_12, column_13, column_15, column_16, column_19 from table_5_5 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_3 from table_5_4 where pkColumn_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-only long transaction
+TX begin
+select fkColumn_0_0, fkColumn_0_1, fkColumn_1_0, column_0, column_1, column_2, column_3, column_10, column_11 from table_5_2 where pkColumn_0 between ? and ? order by pkColumn_0
+Branch
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_3 from table_5_4 where column_0 = ? 
+select fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_3, column_4 from table_5_1 where pkColumn_0 = ? 
+Separator
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_3 from table_5_4 where column_4 = ? 
+select fkColumn_1_0, column_0, column_1, column_2, column_3, column_6 from table_5_3 where pkColumn_0 = ?  and pkColumn_1 between ? and ? order by pkColumn_0, pkColumn_1
+select fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2 from table_5_4 where pkColumn_0 = ? 
+EndBranch
+Branch
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_3, column_4 from table_5_4 where column_0 = ? 
+Separator
+select fkColumn_0_0, fkColumn_0_1, fkColumn_1_0, column_0, column_1, column_2, column_4, column_5, column_9, column_11 from table_5_2 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_0_1, fkColumn_1_0, column_0, column_1, column_4, column_5, column_6, column_7 from table_5_2 where pkColumn_0 = ? 
+select column_0, column_1 from table_5_6 where pkColumn_0 = ?  and pkColumn_1 = ? 
+EndBranch
+select pkColumn_0, pkColumn_1, fkColumn_1_0, column_0, column_1, column_2, column_3 from table_5_3 where column_2 = ?  and column_5 between ? and ? 
+RollbackProbabilities:[0.0, 0.0, 0.009227882009996694, 0.0]
+TX end
+
+
+

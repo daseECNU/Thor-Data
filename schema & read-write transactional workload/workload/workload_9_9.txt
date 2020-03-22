@@ -1,0 +1,26 @@
+WorkloadType read-write simple workload
+
+
+TransactionType read-write simple transaction
+TX begin
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_5, column_10, column_14, column_15, column_16, column_17 from table_9_2 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_7 from table_9_3 where fkColumn_0_0 = ?  and column_1 between ? and ? 
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_6, column_8, column_11, column_12, column_14, column_15, column_16, column_18, column_19 from table_9_1 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_9, column_10, column_13, column_14, column_17, column_18, column_25, column_26, column_27, column_32 from table_9_1 where pkColumn_0 between ? and ? order by pkColumn_0
+update table_9_2 set fkColumn_1_0 = ? , column_0 = ? , column_16 = ?  where pkColumn_0 = ? 
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_4 from table_9_3 where column_2 = ?  and column_6 between ? and ? 
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8 from table_9_0 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_4, column_5, column_7, column_11, column_13, column_14, column_15, column_17, column_26, column_32 from table_9_1 where fkColumn_0_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-write simple transaction
+TX begin
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4, column_7, column_9, column_11, column_12, column_15, column_16, column_17 from table_9_2 where fkColumn_0_0 = ? 
+update table_9_1 set column_0 = ? , column_1 = ? , column_19 = ? , column_24 = ? , column_32 = ?  where pkColumn_0 = ? 
+RollbackProbabilities:[0.0, 0.009518608046977864]
+TX end
+
+
+

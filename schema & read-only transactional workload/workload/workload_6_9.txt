@@ -1,0 +1,14 @@
+WorkloadType read-only simple workload
+
+
+TransactionType read-only simple transaction
+TX begin
+select column_0, column_1, column_2, column_3, column_4, column_6 from table_6_0 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_5, column_7, column_8, column_10, column_11, column_14, column_15, column_16, column_17 from table_6_2 where pkColumn_0 = ? 
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_5, column_10, column_11, column_13, column_14, column_17 from table_6_4 where column_10 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_5, column_6, column_7, column_9, column_10, column_11, column_13, column_16, column_27, column_28, column_29 from table_6_3 where fkColumn_0_0 = ?  and column_16 between ? and ? 
+RollbackProbabilities:[0.0, 0.003952348026981475, 0.0, 0.0]
+TX end
+
+
+

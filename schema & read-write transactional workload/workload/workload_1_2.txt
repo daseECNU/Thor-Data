@@ -1,0 +1,12 @@
+WorkloadType read-write simple workload
+
+
+TransactionType read-write simple transaction
+TX begin
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_2_0, fkColumn_2_1, fkColumn_2_2, column_1, column_4, column_5, column_6, column_12, column_19, column_27, column_40, column_45 from table_1_3 where pkColumn_0 = ? 
+update table_1_2 set column_0 = ? , column_3 = ? , column_4 = ? , column_5 = ? , column_8 = ?  where pkColumn_0 between ? and ?
+RollbackProbabilities:[0.0, 0.0]
+TX end
+
+
+

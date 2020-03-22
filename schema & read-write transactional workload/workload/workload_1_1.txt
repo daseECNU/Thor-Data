@@ -1,0 +1,64 @@
+WorkloadType read-write complex workload
+
+
+TransactionType read-only simple transaction
+TX begin
+select pkColumn_0, pkColumn_1, pkColumn_2, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1 from table_1_1 where column_2 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_1, column_2, column_3, column_5, column_6 from table_1_2 where fkColumn_1_0 = ?  and fkColumn_1_1 = ?  and fkColumn_1_2 = ?  and column_7 between ? and ? 
+RollbackProbabilities:[0.0, 0.0]
+TX end
+
+
+TransactionType read-write long transaction
+TX begin
+select pkColumn_0, pkColumn_1, pkColumn_2, column_0, column_1, column_2, column_3, column_4 from table_1_0 where column_1 = ?  and column_0 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_1, column_2, column_7, column_8 from table_1_2 where column_6 = ?  and column_7 between ? and ? 
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6 from table_1_5 where pkColumn_0 = ?  and pkColumn_1 = ?  and pkColumn_2 = ?  and pkColumn_3 = ? 
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, fkColumn_1_2, column_0, column_1, column_3, column_4, column_7, column_9 from table_1_2 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2, column_3, column_6, column_7 from table_1_8 where pkColumn_0 between ? and ? order by pkColumn_0
+update table_1_4 set column_0 = ?  where pkColumn_0 between ? and ?
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_3, column_4, column_5, column_7, column_8, column_9 from table_1_8 where fkColumn_0_0 = ?  and fkColumn_0_1 = ?  and fkColumn_0_2 = ?  and column_4 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_2, column_3, column_4, column_5, column_6 from table_1_4 where column_0 = ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1 from table_1_1 where column_3 = ?  and column_2 between ? and ? 
+select column_0, column_1, column_2, column_3, column_4 from table_1_5 where pkColumn_0 = ?  and pkColumn_1 = ?  and pkColumn_2 = ?  and pkColumn_3 between ? and ? order by pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3
+select column_0, column_1, column_2, column_3, column_4 from table_1_6 where pkColumn_0 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2, column_3, column_4, column_6 from table_1_8 where column_6 = ? 
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4 from table_1_6 where column_1 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_0, column_3, column_4, column_5, column_7 from table_1_2 where column_1 = ?  and column_7 between ? and ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2 from table_1_1 where column_3 = ? 
+Branch
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4, column_5, column_6 from table_1_9 where column_6 = ?  and column_1 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_0, column_1, column_3, column_4, column_5 from table_1_4 where fkColumn_0_0 = ?  and fkColumn_0_1 = ?  and fkColumn_0_2 = ? 
+Separator
+select column_0, column_1, column_2, column_3, column_4, column_5 from table_1_6 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2, column_4, column_5, column_8 from table_1_8 where fkColumn_0_0 = ?  and fkColumn_0_1 = ?  and fkColumn_0_2 = ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, column_0, column_1, column_2, column_3, column_4 from table_1_0 where column_1 = ?  and column_0 between ? and ? 
+EndBranch
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1 from table_1_1 where pkColumn_0 = ?  and pkColumn_1 = ?  and pkColumn_2 between ? and ? order by pkColumn_0, pkColumn_1, pkColumn_2
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.009679675306974334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.006743876135725996, 0.0, 0.0, 0.0, 0.0, 0.006374895423401946]
+TX end
+
+
+TransactionType read-only long transaction
+TX begin
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2 from table_1_1 where pkColumn_0 = ?  and pkColumn_1 = ?  and pkColumn_2 between ? and ? order by pkColumn_0, pkColumn_1, pkColumn_2
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_2_0, fkColumn_2_1, column_0, column_1, column_2, column_3, column_5, column_8, column_9, column_12, column_39 from table_1_3 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_2, column_4, column_6 from table_1_4 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_3, column_7, column_9 from table_1_8 where column_7 = ?  and column_5 between ? and ? 
+RollbackProbabilities:[0.0012099921285775531, 0.0, 0.0053638777414788666, 0.0]
+TX end
+
+
+TransactionType read-only long transaction
+TX begin
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, column_0, column_1, column_2, column_5, column_8 from table_1_2 where column_4 = ? 
+Multiple 2
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4, column_5 from table_1_9 where column_5 = ?  and column_4 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2, column_4, column_6, column_7, column_8 from table_1_8 where column_7 = ?  and column_4 between ? and ? 
+EndMultiple
+select pkColumn_0, pkColumn_1, pkColumn_2, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, column_0, column_1, column_2, column_3 from table_1_1 where column_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0]
+TX end
+
+
+

@@ -1,0 +1,55 @@
+WorkloadType read-write simple workload
+
+
+TransactionType read-write simple transaction
+TX begin
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_6, column_8 from table_7_1 where pkColumn_0 = ? 
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4 from table_7_0 where column_4 = ?  and column_7 between ? and ? 
+update table_7_0 set column_0 = ? , column_4 = ?  where pkColumn_0 between ? and ?
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_7_6 where pkColumn_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-write simple transaction
+TX begin
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_7_6 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_7_6 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4 from table_7_5 where column_0 = ? 
+Branch
+update table_7_1 set column_0 = ?  where pkColumn_0 = ? 
+update table_7_3 set column_0 = ? , column_4 = ?  where pkColumn_0 = ?  and pkColumn_1 = ? 
+select fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_6 from table_7_3 where pkColumn_0 = ?  and pkColumn_1 = ? 
+update table_7_3 set column_0 = ? , column_3 = ?  where pkColumn_0 = ?  and pkColumn_1 = ? 
+Separator
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8 from table_7_0 where pkColumn_0 = ? 
+update table_7_0 set column_0 = ?  where pkColumn_0 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_7_6 where fkColumn_2_0 = ?  and column_1 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, fkColumn_2_1, column_0, column_2, column_4, column_5 from table_7_4 where column_4 = ?  and column_3 between ? and ? 
+EndBranch
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-write simple transaction
+TX begin
+select column_0, column_1, column_2, column_3, column_4, column_5 from table_7_0 where pkColumn_0 between ? and ? order by pkColumn_0
+Branch
+update table_7_4 set column_0 = ?  where pkColumn_0 = ? 
+Separator
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6 from table_7_0 where column_8 = ?  and column_7 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_7_6 where column_1 = ?  and column_0 between ? and ? 
+select pkColumn_0, pkColumn_1, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_4, column_5 from table_7_3 where fkColumn_1_0 = ? 
+EndBranch
+RollbackProbabilities:[0.0, 0.0]
+TX end
+
+
+TransactionType read-only simple transaction
+TX begin
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_7, column_8 from table_7_1 where pkColumn_0 = ? 
+RollbackProbabilities:[0.0]
+TX end
+
+
+

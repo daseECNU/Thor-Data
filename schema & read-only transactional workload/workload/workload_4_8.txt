@@ -1,0 +1,32 @@
+WorkloadType read-only complex workload
+
+
+TransactionType read-only long transaction
+TX begin
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8 from table_4_3 where column_6 = ?  and column_7 between ? and ? 
+Multiple 1
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_4_10 where fkColumn_1_0 = ?  and column_1 between ? and ? 
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_8 from table_4_2 where column_5 = ? 
+EndMultiple
+select column_0, column_1, column_2, column_3, column_4, column_7, column_8 from table_4_3 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_4, column_5, column_6, column_7, column_8, column_9, column_10 from table_4_9 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_3, column_6, column_7, column_8, column_9 from table_4_5 where pkColumn_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-only long transaction
+TX begin
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_5, column_8, column_9, column_10 from table_4_5 where pkColumn_0 between ? and ? order by pkColumn_0
+Multiple 8
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_4, column_7 from table_4_2 where fkColumn_0_0 = ?  and column_1 between ? and ? 
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4 from table_4_3 where column_6 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1 from table_4_10 where column_0 = ?  and column_1 between ? and ? 
+select fkColumn_0_0, fkColumn_0_1, column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_9 from table_4_9 where pkColumn_0 between ? and ? order by pkColumn_0
+EndMultiple
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_5, column_6, column_8 from table_4_2 where fkColumn_0_0 = ? 
+RollbackProbabilities:[0.0, 0.00972265757290542, 0.0]
+TX end
+
+
+

@@ -1,0 +1,60 @@
+WorkloadType read-write normal workload
+
+
+TransactionType read-write simple transaction
+TX begin
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, column_0, column_1, column_2, column_3, column_4, column_5, column_7, column_8 from table_4_3 where column_0 = ?  and column_2 between ? and ? 
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_5, column_8, column_9, column_10, column_12, column_13, column_14, column_17, column_18, column_20, column_27 from table_4_1 where pkColumn_0 = ? 
+select column_0, column_1, column_2, column_3, column_4, column_6, column_7 from table_4_0 where pkColumn_0 = ? 
+select fkColumn_0_0, column_0, column_1, column_2, column_3 from table_4_4 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_7, column_9, column_10, column_12, column_13, column_14, column_15, column_17, column_18, column_23, column_28, column_30 from table_4_1 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_5, column_6, column_7, column_8, column_12, column_15, column_17 from table_4_1 where fkColumn_0_0 = ?  and column_21 between ? and ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, column_0, column_1, column_2, column_3, column_4, column_5, column_7, column_8 from table_4_3 where column_7 = ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, column_0, column_1, column_2, column_3, column_4, column_6, column_8 from table_4_3 where column_6 = ? 
+update table_4_4 set column_0 = ? , column_6 = ?  where pkColumn_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-only simple transaction
+TX begin
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, column_0, column_1, column_2, column_3, column_4, column_8 from table_4_3 where column_3 = ?  and column_1 between ? and ? 
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_7 from table_4_0 where column_6 = ? 
+RollbackProbabilities:[0.0, 0.0]
+TX end
+
+
+TransactionType read-write long transaction
+TX begin
+select column_0, column_1, column_2, column_3, column_4, column_7 from table_4_0 where pkColumn_0 between ? and ? order by pkColumn_0
+update table_4_2 set column_0 = ? , column_3 = ? , column_8 = ?  where pkColumn_0 between ? and ?
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6 from table_4_0 where column_4 = ?  and column_0 between ? and ? 
+update table_4_0 set column_0 = ?  where pkColumn_0 = ? 
+select fkColumn_0_0, column_0, column_1, column_2, column_3 from table_4_4 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_4, column_5 from table_4_2 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4 from table_4_2 where column_7 = ?  and column_6 between ? and ? 
+select column_0, column_1, column_2, column_3, column_4, column_6, column_7 from table_4_3 where pkColumn_0 = ?  and pkColumn_1 = ?  and pkColumn_2 = ?  and pkColumn_3 between ? and ? order by pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3
+Branch
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_5, column_6 from table_4_4 where column_2 = ?  and column_4 between ? and ? 
+Separator
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3, column_4, column_8, column_9, column_12, column_14, column_15, column_16, column_17, column_18, column_30 from table_4_1 where fkColumn_0_0 = ? 
+select pkColumn_0, fkColumn_0_0, column_0, column_1, column_2, column_3 from table_4_4 where fkColumn_0_0 = ?  and column_6 between ? and ? 
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_5 from table_4_2 where pkColumn_0 = ? 
+EndBranch
+RollbackProbabilities:[0.003646103152494015, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-only simple transaction
+TX begin
+Branch
+select column_0, column_1, column_2, column_3, column_4, column_7 from table_4_0 where pkColumn_0 = ? 
+select fkColumn_0_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8, column_17, column_18, column_23, column_24, column_33 from table_4_1 where pkColumn_0 = ? 
+Separator
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, column_0, column_1, column_2, column_3, column_4, column_5 from table_4_3 where column_1 = ? 
+EndBranch
+RollbackProbabilities:[0.0]
+TX end
+
+
+

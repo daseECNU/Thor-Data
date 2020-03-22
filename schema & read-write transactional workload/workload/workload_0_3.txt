@@ -1,0 +1,18 @@
+WorkloadType read-only simple workload
+
+
+TransactionType read-only simple transaction
+TX begin
+select pkColumn_0, fkColumn_0_0, fkColumn_0_1, fkColumn_0_2, fkColumn_1_0, fkColumn_1_1, fkColumn_1_3, column_0, column_1, column_2, column_3, column_4, column_10, column_12 from table_0_9 where fkColumn_0_0 = ?  and fkColumn_0_1 = ?  and fkColumn_0_2 = ?  and column_3 between ? and ? 
+RollbackProbabilities:[0.0]
+TX end
+
+
+TransactionType read-only simple transaction
+TX begin
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_1_1, column_0, column_1, column_3, column_5, column_6, column_9, column_10, column_15 from table_0_6 where fkColumn_1_0 = ?  and fkColumn_1_1 = ? 
+RollbackProbabilities:[0.0]
+TX end
+
+
+

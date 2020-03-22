@@ -1,0 +1,77 @@
+WorkloadType read-only complex workload
+
+
+TransactionType read-only long transaction
+TX begin
+Branch
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_5, column_6, column_9, column_10, column_11, column_14, column_15, column_17, column_19, column_26 from table_6_2 where pkColumn_0 = ? 
+Separator
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4, column_5, column_7, column_12, column_13, column_17, column_23, column_30 from table_6_6 where column_27 = ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_7, column_8, column_9, column_10, column_11, column_12, column_15, column_16, column_22, column_33, column_34 from table_6_6 where column_24 = ?  and column_7 between ? and ? 
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6 from table_6_0 where pkColumn_0 = ? 
+EndBranch
+select column_0, column_1, column_2, column_3, column_4, column_7 from table_6_0 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_4, column_6, column_7, column_8, column_11, column_12, column_13, column_28, column_36 from table_6_3 where fkColumn_1_0 = ? 
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8, column_11, column_12, column_13, column_14 from table_6_1 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_3, column_4, column_5, column_6, column_8, column_10, column_13, column_14, column_16, column_17, column_24, column_25, column_32 from table_6_3 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4, column_5, column_6, column_7, column_9, column_10, column_11, column_12, column_14, column_15, column_20 from table_6_2 where fkColumn_1_0 = ? 
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-only long transaction
+TX begin
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_7, column_9, column_10, column_11, column_12, column_15 from table_6_4 where column_3 = ? 
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8, column_9, column_11, column_12, column_15 from table_6_5 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_5, column_9, column_10, column_11, column_14, column_15, column_16, column_19 from table_6_2 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_5, column_8, column_9, column_10, column_11, column_12, column_13 from table_6_2 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_5, column_9, column_11, column_15, column_26, column_28, column_39 from table_6_6 where fkColumn_1_0 = ?  and column_36 between ? and ? 
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_4, column_5, column_6, column_8, column_12, column_14, column_15, column_16, column_17, column_34 from table_6_6 where pkColumn_0 = ?  and pkColumn_1 = ?  and pkColumn_2 = ?  and pkColumn_3 = ? 
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_5, column_10, column_13, column_14, column_16, column_32, column_34, column_37 from table_6_6 where fkColumn_1_0 = ? 
+Branch
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_6, column_8, column_9, column_12, column_13, column_14 from table_6_2 where fkColumn_1_0 = ?  and column_18 between ? and ? 
+select column_0, column_1, column_2, column_3, column_4, column_6, column_7, column_8, column_9, column_10, column_15 from table_6_1 where pkColumn_0 = ? 
+select pkColumn_0, column_0, column_1, column_2, column_3, column_4, column_7 from table_6_0 where column_5 = ? 
+Separator
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_6, column_8, column_9, column_11, column_12, column_13, column_14, column_16, column_17, column_21 from table_6_6 where column_11 = ?  and column_34 between ? and ? 
+EndBranch
+RollbackProbabilities:[0.0, 0.005290162981660087, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+TX end
+
+
+TransactionType read-only simple transaction
+TX begin
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_8, column_9, column_13, column_14 from table_6_5 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_10, column_11, column_12, column_13, column_15, column_16, column_21 from table_6_2 where pkColumn_0 = ? 
+RollbackProbabilities:[0.0, 0.0]
+TX end
+
+
+TransactionType read-only long transaction
+TX begin
+select pkColumn_0, pkColumn_1, pkColumn_2, pkColumn_3, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_3, column_6, column_7, column_9, column_11, column_17, column_24, column_29 from table_6_6 where column_36 = ?  and column_26 between ? and ? 
+select fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_5, column_7, column_9, column_15, column_17, column_18, column_22, column_23 from table_6_2 where pkColumn_0 = ? 
+select column_0, column_1, column_2, column_3, column_4 from table_6_0 where pkColumn_0 = ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, column_0, column_1, column_2, column_4, column_8, column_11, column_12, column_13, column_14, column_16, column_17, column_20 from table_6_2 where fkColumn_0_0 = ?  and column_1 between ? and ? 
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_3, column_6, column_10, column_11, column_14, column_15, column_16, column_20, column_24, column_40 from table_6_3 where fkColumn_2_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_3, column_4, column_9, column_12, column_13, column_14, column_16 from table_6_3 where pkColumn_0 between ? and ? order by pkColumn_0
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6 from table_6_0 where pkColumn_0 between ? and ? order by pkColumn_0
+Multiple 6
+select column_0, column_1, column_2, column_3, column_4, column_5, column_6 from table_6_0 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_3, column_4, column_6, column_8, column_12, column_14, column_16, column_21, column_22, column_30, column_35 from table_6_3 where pkColumn_0 = ? 
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_5, column_6, column_11, column_14 from table_6_5 where pkColumn_0 between ? and ? order by pkColumn_0
+select fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_3, column_4, column_5, column_6, column_8, column_10, column_12, column_15, column_16, column_19, column_29, column_30, column_34 from table_6_3 where pkColumn_0 between ? and ? order by pkColumn_0
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_3, column_6, column_10, column_12, column_13, column_14, column_19, column_23, column_38, column_39, column_41 from table_6_3 where fkColumn_1_0 = ?  and column_39 between ? and ? 
+EndMultiple
+RollbackProbabilities:[0.0, 0.0, 0.0, 0.0, 0.0017833937366280833, 0.0, 0.0, 0.003033229589152873]
+TX end
+
+
+TransactionType read-only simple transaction
+TX begin
+select pkColumn_0, fkColumn_0_0, fkColumn_1_0, fkColumn_2_0, column_0, column_1, column_2, column_5, column_8, column_9, column_10, column_11, column_12, column_15, column_20, column_35, column_40 from table_6_3 where fkColumn_2_0 = ?  and column_10 between ? and ? 
+RollbackProbabilities:[0.0]
+TX end
+
+
+

@@ -1,0 +1,294 @@
+TableName:table_3_0
+CREATE TABLE `table_3_0` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `column_0` varchar(23) DEFAULT NULL,
+  `column_1` bigint(20) DEFAULT NULL,
+  `column_2` varchar(28) DEFAULT NULL,
+  `column_3` varchar(51) DEFAULT NULL,
+  `column_4` decimal(3,2) DEFAULT NULL,
+  `column_5` float DEFAULT NULL,
+  `column_6` varchar(36) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `table_3_0_column_6_idx` (`column_6`),
+  KEY `table_3_0_column_4_idx` (`column_4`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_1
+CREATE TABLE `table_3_1` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_1` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_2` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_3` int(11) NOT NULL DEFAULT '0',
+  `column_0` bigint(20) DEFAULT NULL,
+  `column_1` int(11) DEFAULT NULL,
+  `column_2` varchar(44) DEFAULT NULL,
+  `column_3` double DEFAULT NULL,
+  `column_4` int(11) DEFAULT NULL,
+  `column_5` int(11) DEFAULT NULL,
+  `column_6` decimal(1,1) DEFAULT NULL,
+  `column_7` varchar(27) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`,`pkColumn_1`,`pkColumn_2`,`pkColumn_3`),
+  KEY `table_3_1_column_1_idx` (`column_1`),
+  KEY `table_3_1_column_0_idx` (`column_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_10
+CREATE TABLE `table_3_10` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_1` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_1_0` int(11) DEFAULT NULL,
+  `fkColumn_2_0` int(11) DEFAULT NULL,
+  `fkColumn_3_0` int(11) DEFAULT NULL,
+  `column_0` int(11) DEFAULT NULL,
+  `column_1` bigint(20) DEFAULT NULL,
+  `column_2` bigint(20) DEFAULT NULL,
+  `column_3` varchar(22) DEFAULT NULL,
+  `column_4` decimal(3,3) DEFAULT NULL,
+  `column_5` float DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`,`pkColumn_1`),
+  KEY `fkColumn_1_0` (`fkColumn_1_0`),
+  KEY `fkColumn_2_0` (`fkColumn_2_0`),
+  KEY `fkColumn_3_0` (`fkColumn_3_0`),
+  CONSTRAINT `table_3_10_ibfk_1` FOREIGN KEY (`pkColumn_0`) REFERENCES `table_3_2` (`pkColumn_0`),
+  CONSTRAINT `table_3_10_ibfk_2` FOREIGN KEY (`fkColumn_1_0`) REFERENCES `table_3_0` (`pkColumn_0`),
+  CONSTRAINT `table_3_10_ibfk_3` FOREIGN KEY (`fkColumn_2_0`) REFERENCES `table_3_5` (`pkColumn_0`),
+  CONSTRAINT `table_3_10_ibfk_4` FOREIGN KEY (`fkColumn_3_0`) REFERENCES `table_3_9` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_11
+CREATE TABLE `table_3_11` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_1_0` int(11) DEFAULT NULL,
+  `column_0` int(11) DEFAULT NULL,
+  `column_1` double DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `fkColumn_1_0` (`fkColumn_1_0`),
+  CONSTRAINT `table_3_11_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_3` (`pkColumn_0`),
+  CONSTRAINT `table_3_11_ibfk_2` FOREIGN KEY (`fkColumn_1_0`) REFERENCES `table_3_9` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_12
+CREATE TABLE `table_3_12` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `column_0` int(11) DEFAULT NULL,
+  `column_1` varchar(24) DEFAULT NULL,
+  `column_2` varchar(21) DEFAULT NULL,
+  `column_3` float DEFAULT NULL,
+  `column_4` bigint(20) DEFAULT NULL,
+  `column_5` varchar(25) DEFAULT NULL,
+  `column_6` int(11) DEFAULT NULL,
+  `column_7` int(11) DEFAULT NULL,
+  `column_8` varchar(25) DEFAULT NULL,
+  `column_9` bigint(20) DEFAULT NULL,
+  `column_10` int(11) DEFAULT NULL,
+  `column_11` bigint(20) DEFAULT NULL,
+  `column_12` varchar(59) DEFAULT NULL,
+  `column_13` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `table_3_12_column_12_idx` (`column_12`),
+  CONSTRAINT `table_3_12_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_2` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_13
+CREATE TABLE `table_3_13` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_1_0` int(11) DEFAULT NULL,
+  `fkColumn_2_0` int(11) DEFAULT NULL,
+  `fkColumn_2_1` int(11) DEFAULT NULL,
+  `fkColumn_3_0` int(11) DEFAULT NULL,
+  `column_0` varchar(24) DEFAULT NULL,
+  `column_1` decimal(6,4) DEFAULT NULL,
+  `column_2` bigint(20) DEFAULT NULL,
+  `column_3` decimal(15,3) DEFAULT NULL,
+  `column_4` bigint(20) DEFAULT NULL,
+  `column_5` bigint(20) DEFAULT NULL,
+  `column_6` decimal(19,4) DEFAULT NULL,
+  `column_7` double DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `fkColumn_1_0` (`fkColumn_1_0`),
+  KEY `fkColumn_2_0` (`fkColumn_2_0`,`fkColumn_2_1`),
+  KEY `fkColumn_3_0` (`fkColumn_3_0`),
+  CONSTRAINT `table_3_13_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_2` (`pkColumn_0`),
+  CONSTRAINT `table_3_13_ibfk_2` FOREIGN KEY (`fkColumn_1_0`) REFERENCES `table_3_12` (`pkColumn_0`),
+  CONSTRAINT `table_3_13_ibfk_3` FOREIGN KEY (`fkColumn_2_0`, `fkColumn_2_1`) REFERENCES `table_3_10` (`pkColumn_0`, `pkColumn_1`),
+  CONSTRAINT `table_3_13_ibfk_4` FOREIGN KEY (`fkColumn_3_0`) REFERENCES `table_3_11` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_2
+CREATE TABLE `table_3_2` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `column_0` bigint(20) DEFAULT NULL,
+  `column_1` bigint(20) DEFAULT NULL,
+  `column_2` float DEFAULT NULL,
+  `column_3` int(11) DEFAULT NULL,
+  `column_4` int(11) DEFAULT NULL,
+  `column_5` bigint(20) DEFAULT NULL,
+  `column_6` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_3
+CREATE TABLE `table_3_3` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_1_0` int(11) DEFAULT NULL,
+  `fkColumn_1_1` int(11) DEFAULT NULL,
+  `fkColumn_1_2` int(11) DEFAULT NULL,
+  `fkColumn_1_3` int(11) DEFAULT NULL,
+  `fkColumn_2_0` int(11) DEFAULT NULL,
+  `column_0` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `fkColumn_1_0` (`fkColumn_1_0`,`fkColumn_1_1`,`fkColumn_1_2`,`fkColumn_1_3`),
+  KEY `fkColumn_2_0` (`fkColumn_2_0`),
+  CONSTRAINT `table_3_3_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_2` (`pkColumn_0`),
+  CONSTRAINT `table_3_3_ibfk_2` FOREIGN KEY (`fkColumn_1_0`, `fkColumn_1_1`, `fkColumn_1_2`, `fkColumn_1_3`) REFERENCES `table_3_1` (`pkColumn_0`, `pkColumn_1`, `pkColumn_2`, `pkColumn_3`),
+  CONSTRAINT `table_3_3_ibfk_3` FOREIGN KEY (`fkColumn_2_0`) REFERENCES `table_3_0` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_4
+CREATE TABLE `table_3_4` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_1` int(11) NOT NULL DEFAULT '0',
+  `column_0` double DEFAULT NULL,
+  `column_1` varchar(95) DEFAULT NULL,
+  `column_2` varchar(23) DEFAULT NULL,
+  `column_3` decimal(15,3) DEFAULT NULL,
+  `column_4` int(11) DEFAULT NULL,
+  `column_5` int(11) DEFAULT NULL,
+  `column_6` double DEFAULT NULL,
+  `column_7` varchar(41) DEFAULT NULL,
+  `column_8` tinyint(1) DEFAULT NULL,
+  `column_9` decimal(19,1) DEFAULT NULL,
+  `column_10` double DEFAULT NULL,
+  `column_11` bigint(20) DEFAULT NULL,
+  `column_12` double DEFAULT NULL,
+  `column_13` decimal(14,3) DEFAULT NULL,
+  `column_14` bigint(20) DEFAULT NULL,
+  `column_15` bigint(20) DEFAULT NULL,
+  `column_16` varchar(21) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`,`pkColumn_1`),
+  KEY `table_3_4_column_5_idx` (`column_5`),
+  KEY `table_3_4_column_11_idx` (`column_11`),
+  CONSTRAINT `table_3_4_ibfk_1` FOREIGN KEY (`pkColumn_0`) REFERENCES `table_3_2` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_5
+CREATE TABLE `table_3_5` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_0_1` int(11) DEFAULT NULL,
+  `column_0` varchar(55) DEFAULT NULL,
+  `column_1` decimal(18,1) DEFAULT NULL,
+  `column_2` varchar(21) DEFAULT NULL,
+  `column_3` varchar(29) DEFAULT NULL,
+  `column_4` datetime DEFAULT NULL,
+  `column_5` decimal(2,1) DEFAULT NULL,
+  `column_6` bigint(20) DEFAULT NULL,
+  `column_7` varchar(36) DEFAULT NULL,
+  `column_8` datetime DEFAULT NULL,
+  `column_9` decimal(24,3) DEFAULT NULL,
+  `column_10` varchar(20) DEFAULT NULL,
+  `column_11` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`,`fkColumn_0_1`),
+  CONSTRAINT `table_3_5_ibfk_1` FOREIGN KEY (`fkColumn_0_0`, `fkColumn_0_1`) REFERENCES `table_3_4` (`pkColumn_0`, `pkColumn_1`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_6
+CREATE TABLE `table_3_6` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_1_0` int(11) DEFAULT NULL,
+  `fkColumn_1_1` int(11) DEFAULT NULL,
+  `fkColumn_1_2` int(11) DEFAULT NULL,
+  `fkColumn_1_3` int(11) DEFAULT NULL,
+  `column_0` varchar(38) DEFAULT NULL,
+  `column_1` bigint(20) DEFAULT NULL,
+  `column_2` bigint(20) DEFAULT NULL,
+  `column_3` decimal(4,4) DEFAULT NULL,
+  `column_4` varchar(28) DEFAULT NULL,
+  `column_5` decimal(22,1) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `fkColumn_1_0` (`fkColumn_1_0`,`fkColumn_1_1`,`fkColumn_1_2`,`fkColumn_1_3`),
+  KEY `table_3_6_column_0_idx` (`column_0`),
+  CONSTRAINT `table_3_6_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_2` (`pkColumn_0`),
+  CONSTRAINT `table_3_6_ibfk_2` FOREIGN KEY (`fkColumn_1_0`, `fkColumn_1_1`, `fkColumn_1_2`, `fkColumn_1_3`) REFERENCES `table_3_1` (`pkColumn_0`, `pkColumn_1`, `pkColumn_2`, `pkColumn_3`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_7
+CREATE TABLE `table_3_7` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_1` int(11) NOT NULL DEFAULT '0',
+  `pkColumn_2` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_1_0` int(11) DEFAULT NULL,
+  `column_0` int(11) DEFAULT NULL,
+  `column_1` decimal(16,2) DEFAULT NULL,
+  `column_2` int(11) DEFAULT NULL,
+  `column_3` tinyint(1) DEFAULT NULL,
+  `column_4` bigint(20) DEFAULT NULL,
+  `column_5` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`,`pkColumn_1`,`pkColumn_2`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `fkColumn_1_0` (`fkColumn_1_0`),
+  CONSTRAINT `table_3_7_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_2` (`pkColumn_0`),
+  CONSTRAINT `table_3_7_ibfk_2` FOREIGN KEY (`fkColumn_1_0`) REFERENCES `table_3_0` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_8
+CREATE TABLE `table_3_8` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `fkColumn_0_1` int(11) DEFAULT NULL,
+  `fkColumn_0_2` int(11) DEFAULT NULL,
+  `column_0` varchar(44) DEFAULT NULL,
+  `column_1` float DEFAULT NULL,
+  `column_2` varchar(22) DEFAULT NULL,
+  `column_3` decimal(12,4) DEFAULT NULL,
+  `column_4` bigint(20) DEFAULT NULL,
+  `column_5` varchar(32) DEFAULT NULL,
+  `column_6` decimal(15,3) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`,`fkColumn_0_1`,`fkColumn_0_2`),
+  KEY `table_3_8_column_5_idx` (`column_5`),
+  CONSTRAINT `table_3_8_ibfk_1` FOREIGN KEY (`fkColumn_0_0`, `fkColumn_0_1`, `fkColumn_0_2`) REFERENCES `table_3_7` (`pkColumn_0`, `pkColumn_1`, `pkColumn_2`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+TableName:table_3_9
+CREATE TABLE `table_3_9` (
+  `pkColumn_0` int(11) NOT NULL DEFAULT '0',
+  `fkColumn_0_0` int(11) DEFAULT NULL,
+  `column_0` datetime DEFAULT NULL,
+  `column_1` int(11) DEFAULT NULL,
+  `column_2` int(11) DEFAULT NULL,
+  `column_3` double DEFAULT NULL,
+  `column_4` int(11) DEFAULT NULL,
+  `column_5` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`pkColumn_0`),
+  KEY `fkColumn_0_0` (`fkColumn_0_0`),
+  KEY `table_3_9_column_4_idx` (`column_4`),
+  CONSTRAINT `table_3_9_ibfk_1` FOREIGN KEY (`fkColumn_0_0`) REFERENCES `table_3_5` (`pkColumn_0`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
