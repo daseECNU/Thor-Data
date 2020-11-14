@@ -12,7 +12,7 @@ Thor randomly generates 10 tables. Each table's primary key length is evenly dis
 Each table initializes 100,000 rows of records. The primary key data are evenly distributed on (0,2147483647) and the foreign key data are referenced to the primary key according to the even distribution.For integer, it is evenly distributed on (0,2147483647); for varchar, characters are selected according to uniform distribution, and the length is evenly distributed on (1,200); for double, it is evenly distributed on (-999999.9999,999999.9999); for decimal, it is evenly distributed on (- 99999.99999,99999.9999); for blob, it is evenly distributed on 50 random binary files; for timestamp, a data is randomly added from UTC time, and that data is evenly distributed on (0,2147483647); for bool, it is evenly distributed on (false, true).
 
 #### 3.3 Workload
-One workload contains an average of 10 read-write transactions and the other has 10 read-only transactions, both of which contains an average of 20 operations. The operation access distribution is Zipf distribution with parameter skew=5. The test concurrency is 50. The template of basic operations are shown below. 
+One workload contains an average of 10 read-write transactions and the other has 10 read-only transactions, both of which contains an average of 20 operations. The operation access distribution is Zipf distribution with parameter skew=1. The test concurrency is 50. The template of basic operations are shown below. 
 >**The List of Template of Basic Operation**
 >
 >| Name of Basic Operation              | Read-Only | Read-Write |
