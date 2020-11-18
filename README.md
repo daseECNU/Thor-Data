@@ -1,4 +1,4 @@
-﻿### 1 Introduction 
+### 1 Introduction 
 Here is the experimental environment and test case used in our Thor demostration.
 
 ### 2 Environment
@@ -45,3 +45,12 @@ The above operations are selected according to the uniform distribution to form 
 
 ##### 3.3.3 Policy of Issuing Transaction 
 Thor initializes 50 worker threads that repeatedly issue transactions with a random think time between each request.
+
+### Contact Us
+R &amp; D Team: DBhammer project team, School of Data Science & Engineering, East China Normal University.
+
+The main members of the work are: Professor Zhang Rong, Keqiang Li, and Yuming Li.
+
+Address: 3663 Zhongshan North Road, Putuo District, Shanghai.
+
+Postcode: 200062.
