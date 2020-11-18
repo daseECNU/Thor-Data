@@ -53,9 +53,9 @@ DBhammer project team, School of Data Science & Engineering, East China Normal U
 #### Team Members
 Rong Zhang, Professor.
 
-Keqiang Li Ph.D. Student.
+Keqiang Li, Ph.D. Student.
 
-Yuming Li Ph.D. Student.
+Yuming Li, Ph.D. Student.
 
 #### Address
 3663 Zhongshan North Road, Putuo District, Shanghai.
