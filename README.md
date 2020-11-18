@@ -47,11 +47,14 @@ The above operations are selected according to the uniform distribution to form 
 Thor initializes 50 worker threads that repeatedly issue transactions with a random think time between each request.
 
 ### Contact Us
-R &amp; D Team: DBhammer project team, School of Data Science & Engineering, East China Normal University.
+#### R &amp; D Team
+DBhammer project team, School of Data Science & Engineering, East China Normal University.
 
 #### Team Members
 Rong Zhang, Professor.
+
 Keqiang Li Ph.D. Student.
+
 Yuming Li Ph.D. Student.
 
 #### Address
