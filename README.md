@@ -49,7 +49,7 @@ Thor initializes 50 worker threads that repeatedly issue transactions with a ran
 ### Contact Us
 R &amp; D Team: DBhammer project team, School of Data Science & Engineering, East China Normal University.
 
-Members: Professor Zhang Rong, Keqiang Li, and Yuming Li.
+Members: Rong Zhang(Professor), Keqiang Li(PhD), and Yuming Li(PhD).
 
 Address: 3663 Zhongshan North Road, Putuo District, Shanghai.
 
