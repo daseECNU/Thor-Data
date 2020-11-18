@@ -57,8 +57,5 @@ Yuming Li Ph.D. Student.
 #### Address
 3663 Zhongshan North Road, Putuo District, Shanghai.
 
-#### Postcode
-200062.
-
 #### Contact Email
 kqli@stu.ecnu.edu.cn
